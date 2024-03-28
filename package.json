@@ -5,7 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": ""
+    "start:host": "cd host-app && npm run start:build",
+    "start:remote1": "cd remote-app1 && npm run start:build",
+    "start:remote2": "cd remote-app2 && npm run start:build",
+    "start:all": "concurrently \"npm run start:host\" \"npm run start:remote1\" \"npm run start:remote2\""
   },
   "keywords": [],
   "author": "",
